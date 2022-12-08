@@ -36,8 +36,7 @@ pipeline {
      steps{  
          script {
 			docker.withRegistry("https://" + REPOSITORY_URI, "ecr:${AWS_DEFAULT_REGION}:" + registryCredential) {
-                    app.push("${env.BUILD_NUMBER}")
-                    app.push("latest")
+                    dockerImage.push()
                 	}
          }
         }
