@@ -6,7 +6,8 @@ pipeline {
     environment {
         AWS_ACCOUNT_ID=460132273510
         AWS_DEFAULT_REGION="ap-south-1"
-        REPOSITORY_URI = "${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com"
+	IMAGE_REPO_NAME="underwater"
+        REPOSITORY_URI = "${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com/${IMAGE_REPO_NAME}"
 	registryCredential ="demo-admin-user"
     }
    
